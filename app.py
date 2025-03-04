@@ -6,6 +6,10 @@ import numpy as np
 model =pickle.load(open('diabetes_model.sav','rb'))
 app = Flask(__name__)
 
+@app.route("/")
+def home():
+    return "hello world"
+
 @app.route('/predict', methods=['POST'])
 
 def predict():
@@ -22,16 +26,6 @@ def predict():
 
     result=model.predict(input_query)[0]
     return jsonify({'diabetes':str(result)})
-
-
-
-
-
-
-
-
-
-
 
 if __name__ == '__main__':
     app.run(debug=True)

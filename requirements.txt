@@ -1,6 +1,5 @@
-flask
-flask-cors
-gunicorn
-numpy
-pandas  # If used
-scikit-learn  # If used
+pandas==1.5.3
+numpy==1.24.2
+scikit-learn==1.6.1
+flask==3.1.0
+gunicorn==23.0.0
